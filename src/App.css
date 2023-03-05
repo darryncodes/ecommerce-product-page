@@ -1,0 +1,23 @@
+:root {
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(223, 64%, 98%);
+    --clr-neutral-400: hsl(220, 14%, 75%);
+    --clr-neutral-600: hsl(219, 9%, 45%);
+    --clr-dark-400: hsl(220, 13%, 13%);
+    --clr-dark-600: hsl(0, 0%, 0%);
+    --clr-accent-100: hsl(25, 100%, 94%);
+    --clr-accent-400: hsl(26, 100%, 55%);
+}
+
+body {
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--clr-neutral-400);
+    background-color: var(--clr-neutral-100);
+}
+
+.max-w {
+    max-width: 68.75rem;
+    margin: 0 auto;
+}
