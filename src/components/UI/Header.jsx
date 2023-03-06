@@ -1,8 +1,12 @@
 import React from "react";
-import styles from "./Header.module.css";
+import Navigation from "../Layout/Navigation";
 
 const Header = () => {
-    return <header className={styles.header}>Header</header>;
+    return (
+        <header className="py-8 px-4 md:border-b-2 md:border-neutral-200">
+            <Navigation />
+        </header>
+    );
 };
 
 export default Header;

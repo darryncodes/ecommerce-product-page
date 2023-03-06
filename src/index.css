@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
     --clr-neutral-100: hsl(0, 0%, 100%);
     --clr-neutral-200: hsl(223, 64%, 98%);
@@ -15,9 +19,4 @@ body {
     font-size: 1rem;
     color: var(--clr-neutral-400);
     background-color: var(--clr-neutral-100);
-}
-
-.max-w {
-    max-width: 68.75rem;
-    margin: 0 auto;
 }
