@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
-import CartIcon from "./../../assets/CartIcon";
 import MenuIcon from "./../../assets/MenuIcon";
 import CloseIcon from "./../../assets/CloseIcon";
+
+import { navLinks } from "./../../constants/constants";
 
 import logo from "./../../assets/logo.svg";
 import profile from "./../../assets/image-avatar.png";
@@ -13,72 +14,59 @@ const Navigation = () => {
     const handleClick = () => {
         setIsOpen((prevState) => !prevState);
     };
+
+    const mobileNav = navLinks.map((nav) => (
+        <li key={nav.id}>
+            <a href="#">{nav.title}</a>
+        </li>
+    ));
+
+    const desktopNav = navLinks.map((nav) => (
+        <li key={nav.id}>
+            <a
+                href="#"
+                className="hover:text-dark400 hover:border-b-4 hover:border-accent400 hover:pb-[2.5rem]"
+            >
+                {nav.title}
+            </a>
+        </li>
+    ));
+
     return (
         <nav className="flex items-center justify-between">
-            <div className="text-dark400 font-bold fixed top-0 left-0 md:hidden bg-slate-300 h-[100%]">
+            <div className="text-dark400 font-bold fixed top-0 left-0 md:hidden h-full z-10">
+                <div
+                    className={`${
+                        isOpen
+                            ? "fixed w-full h-full inset-0 bg-[#000] opacity-50 -z-10"
+                            : "hidden"
+                    }`}
+                ></div>
                 <ul
                     className={`${
                         isOpen ? "flex" : "hidden"
-                    } flex-col gap-4 pt-20 pl-4 pr-24`}
+                    } flex-col gap-4 pt-20 pl-4 pr-24 bg-neutral100 h-full`}
                 >
-                    <li>
-                        <a href="">Collections</a>
-                    </li>
-                    <li>
-                        <a href="">Men</a>
-                    </li>
-                    <li>
-                        <a href="">Women</a>
-                    </li>
-                    <li>
-                        <a href="">About</a>
-                    </li>
-                    <li>
-                        <a href="">Contact</a>
-                    </li>
+                    {mobileNav}
                 </ul>
             </div>
             <div className="flex items-center gap-4">
-                <button onClick={handleClick} className="md:hidden absolute">
+                <button
+                    onClick={handleClick}
+                    className="md:hidden absolute z-10"
+                >
                     {isOpen ? <CloseIcon /> : <MenuIcon />}
                 </button>
                 <img src={logo} alt="Sneakers logo" className="pl-6 md:pl-0" />
                 <ul className="items-center gap-4 hidden md:flex">
-                    <li>
-                        <a href="" className="hover:text-dark400">
-                            Collections
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" className="hover:text-dark400">
-                            Men
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" className="hover:text-dark400">
-                            Women
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" className="hover:text-dark400">
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" className="hover:text-dark400">
-                            Contact
-                        </a>
-                    </li>
+                    {desktopNav}
                 </ul>
             </div>
             <div className="flex items-center gap-4">
-                <button>
-                    <CartIcon />
-                </button>
                 <img
                     src={profile}
                     alt="User image"
-                    className=" max-w-[2.5rem]"
+                    className="max-w-[2.5rem] rounded-full hover:outline hover:outline-2 hover:outline-accent400 cursor-pointer"
                 />
             </div>
         </nav>
