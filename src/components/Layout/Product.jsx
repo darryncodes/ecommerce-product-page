@@ -1,4 +1,5 @@
 import React from "react";
+import Form from "./Form";
 
 const Product = () => {
     return (
@@ -27,6 +28,7 @@ const Product = () => {
                     <p className="text-neutral400 line-through">$250.00</p>
                 </div>
             </div>
+            <Form />
         </div>
     );
 };
