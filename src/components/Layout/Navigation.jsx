@@ -7,6 +7,8 @@ import { navLinks } from "./../../constants/constants";
 
 import logo from "./../../assets/logo.svg";
 import profile from "./../../assets/image-avatar.png";
+import CartButton from "../Cart/CartButton";
+import Cart from "../Cart/Cart";
 
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -63,6 +65,8 @@ const Navigation = () => {
                 </ul>
             </div>
             <div className="flex items-center gap-4">
+                <Cart />
+                <CartButton />
                 <img
                     src={profile}
                     alt="User image"

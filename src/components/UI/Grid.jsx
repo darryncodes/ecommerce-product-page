@@ -1,5 +1,5 @@
 import React from "react";
-import LightBox from "../Layout/Lightbox";
+import LightBox from "../Layout/LightBox";
 import Product from "../Layout/Product";
 
 const Grid = () => {

@@ -4,9 +4,13 @@ import CartIcon from "./../../assets/CartIcon";
 import MinusIcon from "./../../assets/MinusIcon";
 import PlusIcon from "./../../assets/PlusIcon";
 
+import CartContext from "../../store/cart-context";
+
 const Form = () => {
     const [counter, setCounter] = useState(0);
     const currentCount = useRef();
+
+    const { addItem } = useContext(CartContext);
 
     const handleDecrement = () => {
         if (counter === 0) {
@@ -23,6 +27,7 @@ const Form = () => {
         e.preventDefault();
 
         const count = parseInt(currentCount.current.innerText);
+        addItem(count);
     };
 
     return (
