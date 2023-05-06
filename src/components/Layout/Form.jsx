@@ -6,6 +6,9 @@ import PlusIcon from './../../assets/PlusIcon';
 
 import CartContext from '../../store/cart-context';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Form = () => {
     const [counter, setCounter] = useState(0);
     const currentCount = useRef();
@@ -28,16 +31,33 @@ const Form = () => {
 
         const count = parseInt(currentCount.current.innerText);
         addItem(count);
+
+        const notify = () => {
+            if (count === 0) {
+                return;
+            }
+            toast.success('Added to cart!', {
+                position: 'top-right',
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: 'light',
+            });
+        };
+        notify();
     };
 
     return (
         <div className="grid grid-cols-1 gap-y-4 md:gap-y-0 md:gap-x-4 md:grid-cols-3">
-            <div className="bg-neutral200 text-dark400 grid grid-cols-3 place-items-center rounded-md py-3 hover:opacity-70">
-                <button onClick={handleDecrement}>
+            <div className="bg-neutral200 text-dark400 grid grid-cols-3 place-items-center rounded-md py-3">
+                <button onClick={handleDecrement} className="hover:opacity-70">
                     <MinusIcon />
                 </button>
                 <p ref={currentCount}>{counter}</p>
-                <button onClick={handleIncrement}>
+                <button onClick={handleIncrement} className="hover:opacity-70">
                     <PlusIcon />
                 </button>
             </div>
@@ -48,6 +68,7 @@ const Form = () => {
                 <CartIcon />
                 Add to cart
             </button>
+            <ToastContainer />
         </div>
     );
 };

@@ -11,10 +11,12 @@
     --clr-dark-600: hsl(0, 0%, 0%);
     --clr-accent-100: hsl(25, 100%, 94%);
     --clr-accent-400: hsl(26, 100%, 55%);
+    --toastify-color-success: var(--clr-accent-400);
+    --toastify-font-family: 'Kumbh Sans', sans-serif;
 }
 
 body {
-    font-family: "Kumbh Sans", sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
     font-weight: 400;
     font-size: 1rem;
     color: var(--clr-neutral-400);
