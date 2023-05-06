@@ -77,7 +77,7 @@ const LightBox = () => {
                     <img
                         src={trainer1}
                         alt=""
-                        className="rounded-xl hover:opacity-70"
+                        className="rounded-xl hover:opacity-70 duration-300"
                         onClick={handleSwapImage}
                     />
                 </button>
@@ -85,7 +85,7 @@ const LightBox = () => {
                     <img
                         src={trainer2}
                         alt=""
-                        className="rounded-xl hover:opacity-70"
+                        className="rounded-xl hover:opacity-70 duration-300"
                         onClick={handleSwapImage}
                     />
                 </button>
@@ -93,7 +93,7 @@ const LightBox = () => {
                     <img
                         src={trainer3}
                         alt=""
-                        className="rounded-xl hover:opacity-70"
+                        className="rounded-xl hover:opacity-70 duration-300"
                         onClick={handleSwapImage}
                     />
                 </button>
@@ -101,7 +101,7 @@ const LightBox = () => {
                     <img
                         src={trainer4}
                         alt=""
-                        className="rounded-xl hover:opacity-70"
+                        className="rounded-xl hover:opacity-70 duration-300"
                         onClick={handleSwapImage}
                     />
                 </button>

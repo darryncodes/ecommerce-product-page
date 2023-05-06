@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
+import { motion } from 'framer-motion';
 
-import CartContext from "../../store/cart-context";
+import CartContext from '../../store/cart-context';
 
 const CartBadge = () => {
     const { items } = useContext(CartContext);
@@ -10,9 +11,13 @@ const CartBadge = () => {
     }
 
     return (
-        <span className="bg-accent400 text-xs text-neutral100 rounded-full px-[.3rem] absolute -top-2">
+        <motion.span
+            animate={{ scale: 1 }}
+            initial={{ scale: 0 }}
+            className="bg-accent400 text-xs text-neutral100 rounded-full px-[.3rem] absolute -top-2"
+        >
             {items}
-        </span>
+        </motion.span>
     );
 };
 

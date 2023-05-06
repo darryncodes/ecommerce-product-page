@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import MenuIcon from "./../../assets/MenuIcon";
-import CloseIcon from "./../../assets/CloseIcon";
+import MenuIcon from './../../assets/MenuIcon';
+import CloseIcon from './../../assets/CloseIcon';
 
-import { navLinks } from "./../../constants/constants";
+import { navLinks } from './../../constants/constants';
 
-import logo from "./../../assets/logo.svg";
-import profile from "./../../assets/image-avatar.png";
-import CartButton from "../Cart/CartButton";
-import Cart from "../Cart/Cart";
+import logo from './../../assets/logo.svg';
+import profile from './../../assets/image-avatar.png';
+import CartButton from '../Cart/CartButton';
+import Cart from '../Cart/Cart';
 
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +27,7 @@ const Navigation = () => {
         <li key={nav.id}>
             <a
                 href="#"
-                className="hover:text-dark400 hover:border-b-4 hover:border-accent400 hover:pb-[2.5rem]"
+                className="hover:text-dark400 hover:border-b-4 hover:border-accent400 hover:pb-[2.5rem] duration-300"
             >
                 {nav.title}
             </a>
@@ -40,13 +40,13 @@ const Navigation = () => {
                 <div
                     className={`${
                         isOpen
-                            ? "fixed w-full h-full inset-0 bg-[#000] opacity-50 -z-10"
-                            : "hidden"
+                            ? 'fixed w-full h-full inset-0 bg-[#000] opacity-50 -z-10'
+                            : 'hidden'
                     }`}
                 ></div>
                 <ul
                     className={`${
-                        isOpen ? "flex" : "hidden"
+                        isOpen ? 'flex' : 'hidden'
                     } flex-col gap-4 pt-20 pl-4 pr-24 bg-neutral100 h-full`}
                 >
                     {mobileNav}
@@ -70,7 +70,7 @@ const Navigation = () => {
                 <img
                     src={profile}
                     alt="User image"
-                    className="max-w-[2.5rem] rounded-full hover:outline hover:outline-2 hover:outline-accent400 cursor-pointer"
+                    className="max-w-[2.5rem] rounded-full hover:outline hover:outline-2 hover:outline-accent400 cursor-pointer duration-75"
                 />
             </div>
         </nav>

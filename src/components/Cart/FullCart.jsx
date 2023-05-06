@@ -1,16 +1,44 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
+import { motion } from 'framer-motion';
 
-import CartContext from "../../store/cart-context";
+import CartContext from '../../store/cart-context';
 
-import trainer from "./../../assets/image-product-1-thumbnail.jpg";
-import BinIcon from "./../../assets/BinIcon";
+import trainer from './../../assets/image-product-1-thumbnail.jpg';
+import BinIcon from './../../assets/BinIcon';
 
 const FullCart = () => {
     const { items } = useContext(CartContext);
     const { removeItem } = useContext(CartContext);
 
+    const fadeIn = {
+        hidden: {
+            y: '0',
+            opacity: 0,
+        },
+        visible: {
+            y: '0',
+            opacity: 1,
+            transition: {
+                duration: 0.005,
+                type: 'spring',
+                damping: 25,
+                stiffness: 50,
+            },
+        },
+        exit: {
+            y: '0',
+            opacity: 0,
+        },
+    };
+
     return (
-        <div className="grid">
+        <motion.div
+            variants={fadeIn}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="grid"
+        >
             <div className="flex items-center gap-4 py-4">
                 <img
                     src={trainer}
@@ -20,20 +48,28 @@ const FullCart = () => {
                 <div>
                     <p>Fall Limited Edition Sneakers</p>
                     <p>
-                        $125.00 x<span>{items}</span>{" "}
+                        $125.00 x<span>{items}</span>{' '}
                         <span className="text-dark400 font-bold">
                             ${items * 125}.00
                         </span>
                     </p>
                 </div>
-                <button onClick={removeItem}>
+                <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={removeItem}
+                >
                     <BinIcon />
-                </button>
+                </motion.button>
             </div>
-            <button className="bg-accent400 text-neutral100 rounded-md py-3">
+            <motion.button
+                whileHover={{ scale: 1.01 }}
+                whileTap={{ scale: 0.975 }}
+                className="bg-accent400 text-neutral100 rounded-md py-3"
+            >
                 Checkout
-            </button>
-        </div>
+            </motion.button>
+        </motion.div>
     );
 };
 
