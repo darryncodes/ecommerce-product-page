@@ -1,12 +1,12 @@
-import React, { useRef } from "react";
+import React, { useRef } from 'react';
 
-import trainer1 from "./../../assets/image-product-1.jpg";
-import trainer2 from "./../../assets/image-product-2.jpg";
-import trainer3 from "./../../assets/image-product-3.jpg";
-import trainer4 from "./../../assets/image-product-4.jpg";
+import trainer1 from './../../assets/image-product-1.jpg';
+import trainer2 from './../../assets/image-product-2.jpg';
+import trainer3 from './../../assets/image-product-3.jpg';
+import trainer4 from './../../assets/image-product-4.jpg';
 
-import PreviousIcon from "./../../assets/PreviousIcon";
-import NextIcon from "./../../assets/NextIcon";
+import PreviousIcon from './../../assets/PreviousIcon';
+import NextIcon from './../../assets/NextIcon';
 
 const images = [
     {
@@ -73,31 +73,38 @@ const LightBox = () => {
                 </button>
             </div>
             <div className="grid-cols-4 gap-4 hidden md:grid">
-                <img
-                    src={trainer1}
-                    alt=""
-                    className="rounded-xl hover:outline hover:outline-2 hover:outline-accent400 hover:opacity-70 hover:cursor-pointer"
-                    onClick={handleSwapImage}
-                />
-
-                <img
-                    src={trainer2}
-                    alt=""
-                    className="rounded-xl hover:outline hover:outline-2 hover:outline-accent400 hover:opacity-70 hover:cursor-pointer"
-                    onClick={handleSwapImage}
-                />
-                <img
-                    src={trainer3}
-                    alt=""
-                    className="rounded-xl hover:outline hover:outline-2 hover:outline-accent400 hover:opacity-70 hover:cursor-pointer"
-                    onClick={handleSwapImage}
-                />
-                <img
-                    src={trainer4}
-                    alt=""
-                    className="rounded-xl hover:outline hover:outline-2 hover:outline-accent400 hover:opacity-70 hover:cursor-pointer"
-                    onClick={handleSwapImage}
-                />
+                <button className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 focus:opacity-70">
+                    <img
+                        src={trainer1}
+                        alt=""
+                        className="rounded-xl hover:opacity-70"
+                        onClick={handleSwapImage}
+                    />
+                </button>
+                <button className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 focus:opacity-70">
+                    <img
+                        src={trainer2}
+                        alt=""
+                        className="rounded-xl hover:opacity-70"
+                        onClick={handleSwapImage}
+                    />
+                </button>
+                <button className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 focus:opacity-70">
+                    <img
+                        src={trainer3}
+                        alt=""
+                        className="rounded-xl hover:opacity-70"
+                        onClick={handleSwapImage}
+                    />
+                </button>
+                <button className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 focus:opacity-70">
+                    <img
+                        src={trainer4}
+                        alt=""
+                        className="rounded-xl hover:opacity-70"
+                        onClick={handleSwapImage}
+                    />
+                </button>
             </div>
         </div>
     );
