@@ -40,7 +40,7 @@ const Navigation = () => {
                 <div
                     className={`${
                         isOpen
-                            ? 'fixed w-full h-full inset-0 bg-[#000] opacity-50 -z-10'
+                            ? 'fixed w-full h-full inset-0 bg-[rgba(0,0,0,0.7)] -z-10'
                             : 'hidden'
                     }`}
                 ></div>
