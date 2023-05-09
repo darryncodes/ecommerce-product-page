@@ -58,6 +58,7 @@ const FullCart = () => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={removeItem}
+                    className="focus:outline focus:outline-dark600 focus:outline-2 focus:outline-offset-2 focus:duration-0 focus:rounded-sm"
                 >
                     <BinIcon />
                 </motion.button>
@@ -65,7 +66,7 @@ const FullCart = () => {
             <motion.button
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.975 }}
-                className="bg-accent400 text-neutral100 rounded-md py-3"
+                className="bg-accent400 text-neutral100 rounded-md py-3 focus:outline focus:outline-dark600 focus:outline-2 focus:duration-0 focus:rounded-md"
             >
                 Checkout
             </motion.button>

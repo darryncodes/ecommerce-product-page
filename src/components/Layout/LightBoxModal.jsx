@@ -8,7 +8,7 @@ import trainer4 from './../../assets/image-product-4.jpg';
 
 import PreviousIcon from './../../assets/PreviousIcon';
 import NextIcon from './../../assets/NextIcon';
-import CloseIconOrange from './../../assets/CloseIconOrange';
+import CloseIcon from './../../assets/CloseIcon';
 
 const images = [
     {
@@ -27,7 +27,7 @@ const images = [
 
 const Backdrop = () => {
     return (
-        <div className="fixed w-100 h-100 top-0 right-0 bottom-0 left-0 bg-[rgba(0,0,0,0.7)] z-[1] hidden md:block"></div>
+        <div className="fixed w-100 h-100 top-0 right-0 bottom-0 left-0 bg-[rgba(0,0,0,0.7)] z-[9] hidden md:block"></div>
     );
 };
 
@@ -64,13 +64,16 @@ const LightBoxModal = (props) => {
                 <Backdrop />,
                 document.getElementById('backdrop')
             )}
-            <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-md z-[2] hidden md:block">
-                <button onClick={props.close} className="ml-[27rem] mb-2">
-                    <CloseIconOrange />
+            <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-md z-[10] hidden md:block">
+                <button
+                    onClick={props.close}
+                    className="ml-[27rem] mb-2 fill-accent400"
+                >
+                    <CloseIcon />
                 </button>
                 <div className="mb-4 relative">
                     <button
-                        className="bg-neutral100 flex justify-center items-center w-10 h-10 rounded-full absolute top-1/2 transform -translate-y-1/2 left-[-20px]"
+                        className="bg-neutral100 flex justify-center items-center w-10 h-10 rounded-full absolute top-1/2 transform -translate-y-1/2 left-[-20px] stroke-dark400 hover:stroke-accent400 duration-300"
                         onClick={handlePreviousImage}
                     >
                         <PreviousIcon />
@@ -82,7 +85,7 @@ const LightBoxModal = (props) => {
                         className="md:rounded-xl"
                     />
                     <button
-                        className="bg-neutral100 flex justify-center items-center w-10 h-10 rounded-full absolute top-1/2 transform -translate-y-1/2 right-[-20px]"
+                        className="bg-neutral100 flex justify-center items-center w-10 h-10 rounded-full absolute top-1/2 transform -translate-y-1/2 right-[-20px] stroke-dark400 hover:stroke-accent400 duration-300"
                         onClick={handleNextImage}
                     >
                         <NextIcon />

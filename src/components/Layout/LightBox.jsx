@@ -67,7 +67,7 @@ const LightBox = () => {
         <div>
             <div className="mb-4 relative">
                 <button
-                    className="bg-neutral100 flex justify-center items-center w-10 h-10 rounded-full absolute top-1/2 transform -translate-y-1/2 left-4 md:hidden"
+                    className="bg-neutral100 flex justify-center items-center w-10 h-10 rounded-full absolute top-1/2 transform -translate-y-1/2 left-4 md:hidden stroke-dark400 hover:stroke-accent400 duration-300"
                     onClick={handlePreviousImage}
                 >
                     <PreviousIcon />
@@ -81,7 +81,7 @@ const LightBox = () => {
                 />
                 {openModal && <LightBoxModal close={showModal} />}
                 <button
-                    className="bg-neutral100 flex justify-center items-center w-10 h-10 rounded-full absolute top-1/2 transform -translate-y-1/2 right-4 md:hidden"
+                    className="bg-neutral100 flex justify-center items-center w-10 h-10 rounded-full absolute top-1/2 transform -translate-y-1/2 right-4 md:hidden stroke-dark400 hover:stroke-accent400 duration-300"
                     onClick={handleNextImage}
                 >
                     <NextIcon />

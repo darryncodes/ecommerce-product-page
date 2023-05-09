@@ -27,7 +27,7 @@ const Navigation = () => {
         <li key={nav.id}>
             <a
                 href="#"
-                className="hover:text-dark400 hover:border-b-4 hover:border-accent400 hover:pb-[2.5rem] duration-300"
+                className="hover:text-dark400 hover:border-b-4 hover:border-accent400 hover:pb-[2.5rem] duration-300 focus:outline focus:outline-dark600 focus:outline-2 focus:outline-offset-2 focus:duration-0 focus:rounded-sm"
             >
                 {nav.title}
             </a>
@@ -67,7 +67,7 @@ const Navigation = () => {
             <div className="flex items-center gap-4">
                 <Cart />
                 <CartButton />
-                <button>
+                <button className="focus:outline focus:outline-dark600 focus:outline-2 focus:outline-offset-2 focus:duration-0 focus:rounded-sm">
                     <img
                         src={profile}
                         alt="User image"
