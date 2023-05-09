@@ -65,12 +65,12 @@ const LightBoxModal = (props) => {
                 document.getElementById('backdrop')
             )}
             <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-md z-[2] hidden md:block">
-                <button onClick={props.close} className="ml-[27rem] pb-2">
+                <button onClick={props.close} className="ml-[27rem] mb-2">
                     <CloseIconOrange />
                 </button>
                 <div className="mb-4 relative">
                     <button
-                        className="bg-neutral100 flex justify-center items-center w-10 h-10 rounded-full absolute top-1/2 transform -translate-y-1/2 left-4"
+                        className="bg-neutral100 flex justify-center items-center w-10 h-10 rounded-full absolute top-1/2 transform -translate-y-1/2 left-[-20px]"
                         onClick={handlePreviousImage}
                     >
                         <PreviousIcon />
@@ -82,7 +82,7 @@ const LightBoxModal = (props) => {
                         className="md:rounded-xl"
                     />
                     <button
-                        className="bg-neutral100 flex justify-center items-center w-10 h-10 rounded-full absolute top-1/2 transform -translate-y-1/2 right-4"
+                        className="bg-neutral100 flex justify-center items-center w-10 h-10 rounded-full absolute top-1/2 transform -translate-y-1/2 right-[-20px]"
                         onClick={handleNextImage}
                     >
                         <NextIcon />
@@ -91,13 +91,14 @@ const LightBoxModal = (props) => {
                 <div className="grid-cols-4 gap-4 hidden md:grid">
                     <button
                         onClick={handleSwapImage}
-                        className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100"
+                        className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 focus:bg-[#f5f5f565] relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100 before:focus:opacity-90"
                     >
                         <img src={trainer1} alt="" className="rounded-xl" />
+                        <div className=""></div>
                     </button>
                     <button
                         onClick={handleSwapImage}
-                        className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100"
+                        className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100 before:focus:opacity-90"
                     >
                         <img
                             src={trainer2}
@@ -107,7 +108,7 @@ const LightBoxModal = (props) => {
                     </button>
                     <button
                         onClick={handleSwapImage}
-                        className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100"
+                        className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100 before:focus:opacity-90"
                     >
                         <img
                             src={trainer3}
@@ -117,7 +118,7 @@ const LightBoxModal = (props) => {
                     </button>
                     <button
                         onClick={handleSwapImage}
-                        className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100"
+                        className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100 before:focus:opacity-90"
                     >
                         <img src={trainer4} alt="" className="rounded-xl" />
                     </button>

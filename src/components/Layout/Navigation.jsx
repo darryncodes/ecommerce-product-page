@@ -67,11 +67,13 @@ const Navigation = () => {
             <div className="flex items-center gap-4">
                 <Cart />
                 <CartButton />
-                <img
-                    src={profile}
-                    alt="User image"
-                    className="max-w-[2.5rem] rounded-full hover:outline hover:outline-2 hover:outline-accent400 cursor-pointer duration-75"
-                />
+                <button>
+                    <img
+                        src={profile}
+                        alt="User image"
+                        className="max-w-[2.5rem] rounded-full hover:outline hover:outline-2 hover:outline-accent400 cursor-pointer duration-75"
+                    />
+                </button>
             </div>
         </nav>
     );

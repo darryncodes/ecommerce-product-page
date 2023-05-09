@@ -90,25 +90,25 @@ const LightBox = () => {
             <div className="grid-cols-4 gap-4 hidden md:grid">
                 <button
                     onClick={handleSwapImage}
-                    className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100"
+                    className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100 before:focus:opacity-90"
                 >
                     <img src={trainer1} alt="" className="rounded-xl" />
                 </button>
                 <button
                     onClick={handleSwapImage}
-                    className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100"
+                    className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100 before:focus:opacity-90"
                 >
                     <img src={trainer2} alt="" className="rounded-xl" />
                 </button>
                 <button
                     onClick={handleSwapImage}
-                    className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100"
+                    className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100 before:focus:opacity-90"
                 >
                     <img src={trainer3} alt="" className="rounded-xl" />
                 </button>
                 <button
                     onClick={handleSwapImage}
-                    className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100"
+                    className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100 before:focus:opacity-90"
                 >
                     <img src={trainer4} alt="" className="rounded-xl" />
                 </button>
