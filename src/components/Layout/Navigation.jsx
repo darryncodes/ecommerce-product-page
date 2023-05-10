@@ -19,7 +19,9 @@ const Navigation = () => {
 
     const mobileNav = navLinks.map((nav) => (
         <li key={nav.id}>
-            <a href="#">{nav.title}</a>
+            <a href="#" aria-label={nav.label}>
+                {nav.title}
+            </a>
         </li>
     ));
 
@@ -28,6 +30,7 @@ const Navigation = () => {
             <a
                 href="#"
                 className="hover:text-dark400 hover:border-b-4 hover:border-accent400 hover:pb-[2.5rem] duration-300 focus:outline focus:outline-dark600 focus:outline-2 focus:outline-offset-2 focus:duration-0 focus:rounded-sm"
+                aria-label={nav.label}
             >
                 {nav.title}
             </a>
