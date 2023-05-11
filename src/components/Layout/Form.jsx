@@ -54,6 +54,7 @@ const Form = () => {
                 <button
                     onClick={handleDecrement}
                     className="hover:opacity-70 duration-300 focus:outline focus:outline-dark600 focus:outline-2 focus:outline-offset-2 focus:duration-0 focus:rounded-sm"
+                    aria-label="Decrement number of items to purchase"
                 >
                     <MinusIcon />
                 </button>
@@ -61,6 +62,7 @@ const Form = () => {
                 <button
                     onClick={handleIncrement}
                     className="hover:opacity-70 duration-300 focus:outline focus:outline-dark600 focus:outline-2 focus:outline-offset-2 focus:duration-0 focus:rounded-sm"
+                    aria-label="Increment number of items to purchase"
                 >
                     <PlusIcon />
                 </button>
