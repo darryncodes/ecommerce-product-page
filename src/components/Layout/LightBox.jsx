@@ -69,6 +69,7 @@ const LightBox = () => {
                 <button
                     className="bg-neutral100 flex justify-center items-center w-10 h-10 rounded-full absolute top-1/2 transform -translate-y-1/2 left-4 md:hidden stroke-dark400 hover:stroke-accent400 duration-300"
                     onClick={handlePreviousImage}
+                    aria-label="Previous image"
                 >
                     <PreviousIcon />
                 </button>
@@ -83,6 +84,7 @@ const LightBox = () => {
                 <button
                     className="bg-neutral100 flex justify-center items-center w-10 h-10 rounded-full absolute top-1/2 transform -translate-y-1/2 right-4 md:hidden stroke-dark400 hover:stroke-accent400 duration-300"
                     onClick={handleNextImage}
+                    aria-label="Next image"
                 >
                     <NextIcon />
                 </button>
@@ -91,24 +93,28 @@ const LightBox = () => {
                 <button
                     onClick={handleSwapImage}
                     className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100 before:focus:opacity-90"
+                    aria-label="Swap image"
                 >
                     <img src={trainer1} alt="" className="rounded-xl" />
                 </button>
                 <button
                     onClick={handleSwapImage}
                     className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100 before:focus:opacity-90"
+                    aria-label="Swap image"
                 >
                     <img src={trainer2} alt="" className="rounded-xl" />
                 </button>
                 <button
                     onClick={handleSwapImage}
                     className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100 before:focus:opacity-90"
+                    aria-label="Swap image"
                 >
                     <img src={trainer3} alt="" className="rounded-xl" />
                 </button>
                 <button
                     onClick={handleSwapImage}
                     className="rounded-xl focus:outline focus:outline-2 focus:outline-accent400 relative before:absolute before:inset-0 before:h-100 before:w-100 before:rounded-xl before:opacity-0 before:duration-300 before:bg-[#f5f5f565] before:hover:opacity-100 before:focus:opacity-90"
+                    aria-label="Swap image"
                 >
                     <img src={trainer4} alt="" className="rounded-xl" />
                 </button>
