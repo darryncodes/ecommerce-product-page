@@ -15,6 +15,7 @@ const CartButton = () => {
             whileTap={{ scale: 0.9 }}
             className="relative hover:text-dark400 duration-300 focus:outline focus:outline-dark600 focus:outline-2 focus:outline-offset-2 focus:duration-0 focus:rounded-sm"
             onClick={openCart}
+            aria-label="Open shopping cart"
         >
             <span>
                 <CartIcon />
