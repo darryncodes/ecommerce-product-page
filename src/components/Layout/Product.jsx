@@ -1,5 +1,5 @@
-import React from "react";
-import Form from "./Form";
+import React from 'react';
+import Form from './Form';
 
 const Product = () => {
     return (
@@ -8,9 +8,9 @@ const Product = () => {
                 <p className="text-accent400 text-sm font-bold uppercase">
                     Sneaker Company
                 </p>
-                <h2 className="text-dark400 font-bold text-3xl">
+                <h1 className="text-dark400 font-bold text-3xl">
                     Fall Limited Edition Sneakers
-                </h2>
+                </h1>
                 <p>
                     These low-profile sneakers are your perfect casual wear
                     companion. Featuring a durable rubber outer sole, they’ll
