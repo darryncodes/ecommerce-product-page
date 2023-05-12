@@ -53,7 +53,7 @@ const Form = () => {
             <div className="bg-neutral200 text-dark400 grid grid-cols-3 place-items-center rounded-md py-3">
                 <button
                     onClick={handleDecrement}
-                    className="hover:opacity-70 duration-300 focus:outline focus:outline-dark600 focus:outline-2 focus:outline-offset-2 focus:duration-0 focus:rounded-sm"
+                    className="hover:opacity-70 duration-300 focus:outline focus:outline-dark600 focus:outline-2 focus:outline-offset-2 focus:duration-0 focus:rounded-sm px-2 py-3"
                     aria-label="Decrement number of items to purchase"
                 >
                     <MinusIcon />
@@ -61,7 +61,7 @@ const Form = () => {
                 <p ref={currentCount}>{counter}</p>
                 <button
                     onClick={handleIncrement}
-                    className="hover:opacity-70 duration-300 focus:outline focus:outline-dark600 focus:outline-2 focus:outline-offset-2 focus:duration-0 focus:rounded-sm"
+                    className="hover:opacity-70 duration-300 focus:outline focus:outline-dark600 focus:outline-2 focus:outline-offset-2 focus:duration-0 focus:rounded-sm p-2"
                     aria-label="Increment number of items to purchase"
                 >
                     <PlusIcon />
@@ -71,7 +71,7 @@ const Form = () => {
                 whileHover={{ scale: 1.015 }}
                 whileTap={{ scale: 0.985 }}
                 onClick={handleSubmit}
-                className="col-span-2 bg-accent400 text-neutral100 rounded-md flex justify-center gap-2 py-3 shadow-xl shadow-accent600 hover:opacity-70 duration-300 focus:outline focus:outline-dark600 focus:outline-2 focus:duration-0 focus:rounded-md"
+                className="col-span-2 bg-accent400 text-neutral100 rounded-md flex justify-center items-center gap-2 py-3 shadow-xl shadow-accent600 hover:opacity-70 duration-300 focus:outline focus:outline-dark600 focus:outline-2 focus:duration-0 focus:rounded-md"
             >
                 <CartIcon />
                 Add to cart
